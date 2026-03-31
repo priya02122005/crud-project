@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee CRUD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h2>Employee Management System</h2>
+
+<div class="form-box">
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="role" placeholder="Enter Role">
+    <br>
+    <button onclick="addEmployee()">Save</button>
+</div>
+
+<input type="text" id="search" placeholder="Search employee..." onkeyup="searchEmployee()">
+
+<table>
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Action</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+</table>
+
+<div id="popup" class="popup"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
